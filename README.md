@@ -36,7 +36,7 @@ You need `Docker` installed in your machine.
    ```sh
    cd catoopia
    ```
-4. Enter your API in `.env.example` and rename it to `.env.local`
+4. Enter your API KEY in `.env.example` and rename it to `.env.local`
 
    ```yaml
    NEXT_PUBLIC_CAT_API_KEY=<YOUR_API_KEY>
