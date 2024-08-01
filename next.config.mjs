@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output:'standalone',
     images: {
-        domains:["cdn2.thecatapi.com"]
-    },
+        dangerouslyAllowSVG:true,
+        remotePatterns:[
+            {
+                protocol:'https',
+                hostname: 'placehold.co',
+                pathname:'/**',
+            }
+        ]
+    }
 };
 
 export default nextConfig;

@@ -1,12 +1,12 @@
+import { fonts } from "./fonts";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import Providers from "./Providers";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Catoopia",
-  description: "Find you Cat here",
+  description: "World of Cats",
 };
 
 export default function RootLayout({
@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={fonts.ubuntu.variable}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
